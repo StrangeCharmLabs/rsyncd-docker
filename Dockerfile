@@ -5,4 +5,4 @@ RUN apt-get update -y \
     rsync \
     && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT [ "rsyncd" ]
+ENTRYPOINT [ "rsync", "--daemon" ]
